@@ -1,51 +1,16 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_application_1/first_screen.dart';
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  int counter = 0;
-
+class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Counter App"),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    counter++; 
-                  });
-                  print(counter);
-                },
-                child: Text("Click me"),
-              ),
-              Text(
-                "$counter",
-                style: TextStyle(fontSize: 24), 
-              ),
-            ],
-          ),
-        ),
-      ),
+        debugShowCheckedModeBanner: false,
+       home:MyAppbar() ,
     );
   }
+
 }
-
-
-
-
-
- 
